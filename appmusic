@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reproductor de Canciones</title>
+    <style>
+        /* Estilos CSS para el reproductor */
+        .player-container {
+            text-align: center;
+        }
+
+        #audio-player {
+            margin-top: 20px;
+        }
+
+        #controls {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="player-container">
+        <h2>Reproductor de Canciones</h2>
+        <audio id="audio-player" controls>
+            <source src="C:\MUSIC\INEVITABLE.mp3" type="audio/mpeg">
+            Tu navegador no admite la reproducción de audio.
+        </audio>
+        <div id="controls">
+            <button onclick="play()">Reproducir</button>
+            <button onclick="pause()">Pausar</button>
+            <button onclick="stop()">Detener</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript
+        var audioPlayer = document.getElementById("audio-player");
+
+        function play() {
+            audioPlayer.play();
+        }
+
+        function pause() {
+            audioPlayer.pause();
+        }
+
+        function stop() {
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+        }
+    </script>
+</body>
+</html>
